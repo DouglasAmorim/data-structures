@@ -1,0 +1,13 @@
+BigO
+
+How can we compare two differents codes for the same solution
+
+TimeComplexity -> the number of operations of a code takes to finalize execution
+Why dont mesure in TIME (seconds) ? Because if your 'computer' is 'better' will run 'faster' 
+
+SpaceComplexity -> the space of each solution takes from the memory to execute
+
+Ω - Best case scenario
+θ - Average case scenario
+O - Worst case scenario 
+Technically when called about bigO is always about worst case
