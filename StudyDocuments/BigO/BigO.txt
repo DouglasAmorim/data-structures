@@ -12,6 +12,11 @@ SpaceComplexity -> the space of each solution takes from the memory to execute
 O - Worst case scenario 
 Technically when called about bigO is always about worst case
 
+ConstantTime : O(1)
+DivideAndConquer: O(log n)
+Proportional: O(n)
+loop within a loop: O(n^2)
+
 Simplify methods: 
 
 - DropConstants: 
@@ -19,3 +24,9 @@ Doesnt matter if was O(100n) O(1000n) we can simplify and call O(n)
 
 - Drop non dominants: 
 Example : O(nˆ2 + n), Nˆ2 in that case is dominant, so we can represent as just O(nˆ2)
+
+____
+
+Adding and removing in a LIST is always O(n), where N is the number of parameters in the list
+In a list if we are looking fom a VALUE is always O(n), where N is the number of parameters in the list
+And when we are looking for a index is O(1)
