@@ -11,3 +11,5 @@ SpaceComplexity -> the space of each solution takes from the memory to execute
 θ - Average case scenario
 O - Worst case scenario 
 Technically when called about bigO is always about worst case
+
+# Doesnt matter if was O(100n) O(1000n) we can simplify and call O(n)
