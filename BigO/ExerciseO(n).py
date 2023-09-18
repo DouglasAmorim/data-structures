@@ -5,7 +5,7 @@
 # The function signature should be: def print_items(n):
 
 def print_items(n): 
-    for i in range(n - 1): 
+    for i in range(n): 
         print(i);
         
 print_items(10);
