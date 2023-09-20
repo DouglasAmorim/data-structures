@@ -1,0 +1,2 @@
+If we remove all variables who point to some value in memory
+Python will automatically remove this value from memory, using 'Garbage Collector'
