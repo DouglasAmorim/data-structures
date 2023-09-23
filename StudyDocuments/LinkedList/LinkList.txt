@@ -1,0 +1,13 @@
+There is two pointers head and tail.
+Head points to the first node of the linkedlist, and the tail points to the last node array. 
+Each node points to the next node of the list.
+
+BigO in linkedList: 
+Add an item to final of a linkedList is O(1)
+Remove an item to the final of a linkedList is 0(n)
+
+Add an item to the beggining of a linkedList is O(1)
+Remove an item to the beggining of a linkedList is O(1)
+
+Add an item in the middle of the linkedList is O(n)
+Remove an item in the middle of the linkedList is O(n)
