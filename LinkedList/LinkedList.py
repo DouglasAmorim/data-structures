@@ -11,6 +11,12 @@ class LinkedList:
         self.tail = newNode
         self.lenght = 1
 
+    def printList(self): 
+        temp = self.head
+        while temp is not None: 
+            print(temp.value)
+            temp = temp.next
+
     def append(self, value): 
          # Create a new node 
          # and add that node to the end
@@ -28,4 +34,4 @@ class LinkedList:
 
 myLinkedList = LinkedList(4)
 
-print(myLinkedList.head.value)
+print(myLinkedList.printList())
