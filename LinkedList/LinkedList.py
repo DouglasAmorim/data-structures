@@ -9,7 +9,7 @@ class LinkedList:
         newNode = Node(value)
         self.head = newNode
         self.tail = newNode
-        self.lenght = 1
+        self.length = 1
 
     def printList(self): 
         temp = self.head
@@ -20,7 +20,17 @@ class LinkedList:
     def append(self, value): 
          # Create a new node 
          # and add that node to the end
-        pass
+        newNode = Node(value)
+
+        if self.head is None: 
+            self.head = newNode
+            self.tail = newNode
+        else: 
+            self.tail.next = newNode
+            self.tail = newNode
+        self.length += 1
+        
+        return True
 
     def prepend(self, value): 
          # Create a new node 
@@ -33,5 +43,5 @@ class LinkedList:
         pass
 
 myLinkedList = LinkedList(4)
-
+myLinkedList.append(3)
 print(myLinkedList.printList())
