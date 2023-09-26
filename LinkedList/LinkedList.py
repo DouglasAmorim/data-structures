@@ -56,7 +56,28 @@ class LinkedList:
     def prepend(self, value): 
          # Create a new node 
          # and add that node to the beginning
-        pass
+
+        newNode = Node(value)
+
+        if self.head is None:
+            return self.append(newNode)
+        else: 
+            newNode.next = self.head
+            self.head = newNode
+            self.length += 1
+
+            return True
+
+    def popFirst(self): 
+        if self.length <= 1: 
+            return self.pop()
+        else:
+            temp = self.head 
+            self.head = self.head.next
+            temp.next = None
+            self.length -= 1
+
+            return temp
 
     def insert(self, index, value):
         # Create a new node 
@@ -67,5 +88,7 @@ myLinkedList = LinkedList(4)
 #myLinkedList.append(3)
 #myLinkedList.append(1)
 #myLinkedList.pop()
-myLinkedList.pop()
+#myLinkedList.pop()
+myLinkedList.prepend(1)
+myLinkedList.popFirst()
 print(myLinkedList.printList())
