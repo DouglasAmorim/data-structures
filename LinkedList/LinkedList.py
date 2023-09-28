@@ -88,6 +88,15 @@ class LinkedList:
             temp = temp.next
         return temp
 
+    def setValue(self, index, value):
+        temp = self.get(index)
+
+        if temp: 
+            temp.value = value
+            return True
+        
+        return False
+
     def insert(self, index, value):
         # Create a new node 
         # insert a node
@@ -99,6 +108,7 @@ myLinkedList.append(1)
 #myLinkedList.pop()
 #myLinkedList.pop()
 myLinkedList.prepend(2)
+myLinkedList.setValue(0, 10)
 #myLinkedList.popFirst()
 print(myLinkedList.printList())
 print(myLinkedList.get(0).value)
