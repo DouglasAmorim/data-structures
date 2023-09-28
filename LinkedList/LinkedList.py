@@ -140,6 +140,21 @@ class LinkedList:
 
             return temp
         return None
+    
+    def reverse(self): 
+        temp = self.head
+        self.head = self.tail
+        self.tail = temp
+
+        after = temp.next
+        before = None
+
+        for _ in range(self.length): 
+            after = temp.next
+            temp.next = before
+
+            before = temp
+            temp = after
 
 
 myLinkedList = LinkedList(4)
@@ -151,5 +166,6 @@ myLinkedList.prepend(2)
 myLinkedList.setValue(0, 10)
 myLinkedList.insert(1, 8)
 myLinkedList.remove(2)
+myLinkedList.reverse()
 #myLinkedList.popFirst()
 print(myLinkedList.printList())
