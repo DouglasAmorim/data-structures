@@ -60,13 +60,14 @@ class LinkedList:
         newNode = Node(value)
 
         if self.head is None:
-            return self.append(newNode)
+            self.head = newNode
+            self.tail = newNode
         else: 
             newNode.next = self.head
             self.head = newNode
-            self.length += 1
-
-            return True
+            
+        self.length += 1
+        return True
 
     def popFirst(self): 
         if self.length <= 1: 
