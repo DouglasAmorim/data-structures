@@ -65,7 +65,7 @@ class LinkedList:
         else: 
             newNode.next = self.head
             self.head = newNode
-            
+
         self.length += 1
         return True
 
@@ -131,14 +131,11 @@ class LinkedList:
             return self.pop()
         
         prev = self.get(index - 1)
-        if prev: 
-            temp = prev.next
-
+        temp = prev.next
+        if temp:
             prev.next = temp.next
             temp.next = None
-
             self.length -= 1
-
             return temp
         return None
     
