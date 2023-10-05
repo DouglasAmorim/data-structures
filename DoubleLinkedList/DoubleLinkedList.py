@@ -62,6 +62,7 @@ class DoublyLinkedList:
             self.head = newNode
         
         self.length += 1
+        return True
         
 myDoublyLinkedList = DoublyLinkedList(7)
 myDoublyLinkedList.append(2)
