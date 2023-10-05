@@ -50,10 +50,23 @@ class DoublyLinkedList:
 
             return temp
         
+    def prepend(self, value): 
+        newNode = Node(value)
 
+        if self.head is None: 
+            self.head = newNode
+            self.tail = newNode
+        else: 
+            newNode.next = self.head
+            self.head.prev = newNode
+            self.head = newNode
+        
+        self.length += 1
+        
 myDoublyLinkedList = DoublyLinkedList(7)
 myDoublyLinkedList.append(2)
 myDoublyLinkedList.append(5)
 myDoublyLinkedList.append(9)
+myDoublyLinkedList.prepend(15)
 myDoublyLinkedList.pop()
 myDoublyLinkedList.print_list()
