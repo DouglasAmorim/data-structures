@@ -42,24 +42,26 @@ class LinkedList:
         self.head = None
         self.length = 0
 
-    def reverse_between(self, startIndex, endIndex):
-        prev = self.head
-        start = self.head
-        end = self.head
-
-        for i in range(self.length): 
-            if i < (startIndex - 1): 
-                prev = prev.next
-
-            if i < startIndex: 
-                start = start.next
-
-            if i < endIndex: 
-                end = end.next
-        
-        temp = start
-        after = temp.next
-        for 
+    def reverse_between(self, start_index, end_index):
+        if self.length <= 1:
+            return
+    
+        dummy_node = Node(0)
+        dummy_node.next = self.head
+        previous_node = dummy_node
+    
+        for i in range(start_index):
+            previous_node = previous_node.next
+    
+        current_node = previous_node.next
+    
+        for i in range(end_index - start_index):
+            node_to_move = current_node.next
+            current_node.next = node_to_move.next
+            node_to_move.next = previous_node.next
+            previous_node.next = node_to_move
+    
+        self.head = dummy_node.next
 
     
 linked_list = LinkedList(1)
