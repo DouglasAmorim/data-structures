@@ -103,11 +103,39 @@ class DoublyLinkedList:
         
         return False
     
+    def insert(self, index, value): 
+        if index < 0 or index > self.length: 
+            return False
+        
+        if index == 0: 
+            return self.prepend(value)
+        
+        if index == self.length: 
+            return self.append(value)
+        
+
+        newNode = Node(value)
+        before = self.get(index - 1)
+        after = before.next
+
+        before.next = newNode
+        newNode.prev = before
+        newNode.next = after
+
+        if after is not None: 
+            after.prev = newNode
+
+        self.length += 1
+        return True
+            
+
+    
 myDoublyLinkedList = DoublyLinkedList(7)
 myDoublyLinkedList.append(2)
 myDoublyLinkedList.append(5)
 myDoublyLinkedList.append(9)
 myDoublyLinkedList.set_value(1, 456)
+myDoublyLinkedList.insert(4, 4)
 #myDoublyLinkedList.prepend(15)
 #myDoublyLinkedList.pop()
 #myDoublyLinkedList.pop_first()
