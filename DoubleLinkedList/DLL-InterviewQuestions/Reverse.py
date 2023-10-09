@@ -1,3 +1,14 @@
+'''
+DLL: Reverse ( ** Interview Question)
+Create a new method called reverse that reverses the order of the nodes in the list, i.e., the first node becomes the last node, the second node becomes the second-to-last node, and so on.
+
+To do this, you'll need to traverse the list and change the direction of the pointers between the nodes so that they point in the opposite direction. 
+
+Do not change the value of any of the nodes.
+
+Once you've done this for all nodes, you'll also need to update the head and tail pointers to reflect the new order of the nodes.
+'''
+
 class Node:
     def __init__(self, value):
         self.value = value
@@ -29,41 +40,37 @@ class DoublyLinkedList:
             self.tail = new_node
         self.length += 1
         return True
-
-    def swap_first_last(self): 
-        if self.length == 0: 
-            return False
         
-        temp = self.head.value
 
-        self.head.value = self.tail.value
-        self.tail.value = temp
+    def reverse(self):
+        temp = self.head
+        while temp is not None: 
+            next = temp.next
+            prev = temp.prev
+            temp.prev = next
+            temp.next = prev
 
-        return True
-    # WRITE SWAP_FIRST_LAST METHOD HERE #
-    #                                   #
-    #                                   #
-    #                                   #
-    #                                   #
-    #####################################
-    
-    
-    
+            temp = next
+        temp = self.head
+        self.head = self.tail
+        self.tail = temp
+
 
 my_doubly_linked_list = DoublyLinkedList(1)
 my_doubly_linked_list.append(2)
 my_doubly_linked_list.append(3)
 my_doubly_linked_list.append(4)
+my_doubly_linked_list.append(5)
 
 
-print('DLL before swap_first_last():')
+print('DLL before reverse():')
 my_doubly_linked_list.print_list()
 
 
-my_doubly_linked_list.swap_first_last()
+my_doubly_linked_list.reverse()
 
 
-print('\nDLL after swap_first_last():')
+print('\nDLL after reverse():')
 my_doubly_linked_list.print_list()
 
 
@@ -71,16 +78,18 @@ my_doubly_linked_list.print_list()
 """
     EXPECTED OUTPUT:
     ----------------
-    DLL before swap_first_last():
+    DLL before reverse():
     1
     2
     3
     4
+    5
 
-    DLL after swap_first_last():
+    DLL after reverse():
+    5
     4
-    2
     3
+    2
     1
 
 """
