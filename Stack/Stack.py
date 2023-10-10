@@ -34,7 +34,10 @@ class Stack:
         temp = self.top
         self.top = self.top.next
         temp.next = None
+        self.height -= 1
+
         return temp
+    
 myStack = Stack(5)
 myStack.push(3)
 myStack.pop()
