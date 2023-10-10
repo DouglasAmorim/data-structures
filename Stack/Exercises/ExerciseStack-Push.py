@@ -1,18 +1,18 @@
-class Node: 
+class Node:
     def __init__(self, value):
         self.value = value
         self.next = None
+        
 
 class Stack:
     def __init__(self, value):
-        newNode = Node(value)
-        self.top = newNode
+        new_node = Node(value)
+        self.top = new_node
         self.height = 1
 
-    def print_stack(self): 
+    def print_stack(self):
         temp = self.top
-
-        while temp is not None: 
+        while temp is not None:
             print(temp.value)
             temp = temp.next
 
@@ -26,7 +26,30 @@ class Stack:
             self.top = newNode
         
         self.height += 1
+ 
 
-myStack = Stack(5)
-myStack.push(3)
-myStack.print_stack()
+
+
+my_stack = Stack(2)
+
+print('Stack before push(1):')
+my_stack.print_stack()
+
+my_stack.push(1)
+
+print('\nStack after push(1):')
+my_stack.print_stack()
+
+
+
+"""
+    EXPECTED OUTPUT:
+    ----------------
+    Stack before push(1):
+    2
+
+    Stack after push(1):
+    1
+    2   
+
+"""
