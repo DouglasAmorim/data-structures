@@ -49,8 +49,27 @@ def reverse_string(string):
  
     return reversed_string
 
+def sort_stack(stack):
+    additional_stack = Stack()
+ 
+    while not stack.is_empty():
+        temp = stack.pop()
+ 
+        while not additional_stack.is_empty() and additional_stack.peek() > temp:
+            stack.push(additional_stack.pop())
+ 
+        additional_stack.push(temp)
+ 
+    while not additional_stack.is_empty():
+        stack.push(additional_stack.pop())
+
 myStack = Stack()
 myStack.push(3)
-print(reverse_string("banana"))
+myStack.push(32)
+myStack.push(5)
+myStack.push(7)
+
+
+print(sort_stack(myStack))
 #myStack.pop()
 myStack.print_stack()
