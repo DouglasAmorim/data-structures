@@ -1,0 +1,6 @@
+Binary Tree: 
+
+Each node of a binary tree points to two others nodes. 
+A binary tree is called full when each node points to others two nodes or points to None node.
+A binary tree is callend perfect when any level in the tree that has any nodes is completely filled all way cross.
+There are two 'types' of nodes parent and child, one parent have none or more child, but one child have only one parent
