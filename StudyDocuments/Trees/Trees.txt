@@ -4,3 +4,10 @@ Each node of a binary tree points to two others nodes.
 A binary tree is called full when each node points to others two nodes or points to None node.
 A binary tree is callend perfect when any level in the tree that has any nodes is completely filled all way cross.
 There are two 'types' of nodes parent and child, one parent have none or more child, but one child have only one parent
+
+Binary search tree:
+when we add a number in a binary search tree, if the number is greater then the actual node, we go to the 'right' node, and made the same check again.
+But if the number is smaller than the actual node, we go to the 'left' node, and made the same check again.
+
+All nodes below to the right is going to be grater than the node
+All nodes below to the left is going to be smaller than the node
