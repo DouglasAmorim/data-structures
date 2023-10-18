@@ -39,20 +39,17 @@ class BinarySearchTree:
         return True
     
     def contains(self, value):
-        if self.root is None: 
-            return False
-        else: 
-            temp = self.root
-            while temp is not None:
-                if temp.value == value: 
-                    return True
-                
-                if temp.value > value: 
-                    temp = temp.left
-                else: 
-                    temp = temp.right
+        temp = self.root
+        while temp is not None:
+            if temp.value == value: 
+                return True
+            
+            if temp.value > value: 
+                temp = temp.left
+            else: 
+                temp = temp.right
 
-            return False
+        return False
 
 my_tree = BinarySearchTree()
 my_tree.insert(3)
