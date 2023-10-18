@@ -15,3 +15,4 @@ All nodes below to the left is going to be smaller than the node
 Big O in Binary search tree:
 is O(log n) in best case -> Divide and conquer
 in worst case the Binary search tree is like an linked list, so the big O will be O(n)
+Omega (best case) and Theta (average case) are both (log n). However, worst case is O(n) and Big O measures worst case. The typically treat Binary Search Trees as O(log n) but technically they are O(n). 
