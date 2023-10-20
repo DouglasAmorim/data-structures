@@ -1,0 +1,11 @@
+Hashtable
+
+Characteristic: 
+- Is one way
+- Is deterministic 
+
+Separate Chaining: 
+- Using a "List" to store another "dictionary" value in a hash address
+
+Linear Probing (Open addressing): 
+- When we generate a hash who already has a "dictionary", we jump to the next hash to store de dictionary
