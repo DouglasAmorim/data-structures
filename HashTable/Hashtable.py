@@ -36,10 +36,23 @@ class HashTable:
                 for j in range(len(self.data_map[i])):
                     all_keys.append(self.data_map[i][j][0])
         return all_keys
+
+# This method is O(2n) so we drop the constant = O(n)
+def item_in_common(list1, list2): 
+    myDict = { }
+
+    for i in list1: 
+        myDict[i] = True
+
+    for j in list2: 
+        if j in myDict: 
+            return True
+    return False
+
+list1 = [1,3,3] 
+list2 = [2,4,6,5]
     
-        
-
-
+print(item_in_common(list1, list2))
 
 myHashTable = HashTable()
 myHashTable.set("emergency", 911)

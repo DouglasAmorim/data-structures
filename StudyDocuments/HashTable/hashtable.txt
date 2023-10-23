@@ -11,3 +11,6 @@ Linear Probing (Open addressing):
 - When we generate a hash who already has a "dictionary", we jump to the next hash to store de dictionary
 
 A Hashtable with a size of an prime number increases the ammount of randomness for how the key value pairs are going to be distributed through the has table
+
+We consider hashtables implemented by "python" for example as O(1) for set and get.
+because the method who generate the hash is more efficient and the memory space is much larger, comporared to what we implemented here
