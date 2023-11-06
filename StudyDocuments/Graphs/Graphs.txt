@@ -1,0 +1,6 @@
+Graphs is composed of Vertices and Edges
+Vertices are the same of Nodes, and Edges are the conection between vertices. 
+In graph each Edge has a values, with this values we can calculate the weight of the path between each node
+
+
+Edges can be directional or bidirectional. Can be weighted or not weighted.
