@@ -31,6 +31,22 @@ class Graph:
             return True
         return False
     
+    def remove_vertice(self, vertex):
+        if vertex in self.adj_list.keys():
+            for other_vertex in self.adj_list[vertex]:
+                try:
+                    self.adj_list[other_vertex].remove(vertex)
+                except: 
+                    pass
+
+            try:
+                del self.adj_list[vertex]
+            except:
+                pass
+
+            return True
+        return False
+    
 myGraph = Graph()
 myGraph.add_vertex(1)
 myGraph.add_vertex(2)
@@ -41,7 +57,7 @@ myGraph.add_edge(1, 2)
 myGraph.add_edge(2, 3)
 myGraph.add_edge(3, 1)
 
-myGraph.remove_edge(1, 2)
-myGraph.remove_edge(1, 4)
+myGraph.remove_vertice(4)
+myGraph.remove_vertice(1)
 
 myGraph.print_graph()
